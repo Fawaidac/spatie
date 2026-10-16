@@ -1,0 +1,88 @@
+        <header class="navbar-custom">
+            <div class="navbar-left">
+                <button class="btn-desktop-toggle d-none d-xl-flex align-items-center justify-content-center me-3"
+                    id="desktop-sidebar-toggle" aria-label="Minimize Sidebar">
+                    <i class="bi bi-chevron-bar-left"></i>
+                </button>
+                <button class="sidebar-toggle-btn d-flex d-xl-none align-items-center justify-content-center me-2" id="sidebar-toggle" aria-label="Toggle Navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+
+            <div class="navbar-search-wrapper">
+                <input type="text" class="navbar-search-input" placeholder="Search anything..." id="main-search">
+                <button class="navbar-search-btn" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+
+            <div class="navbar-actions">
+                <button class="navbar-action-btn me-1" aria-label="Toggle Fullscreen" id="btn-fullscreen">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                </button>
+                <div class="dropdown">
+                    <button class="navbar-action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="btn-notifications" data-bs-auto-close="outside">
+                        <i class="bi bi-bell"></i>
+                        <span class="navbar-action-badge"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-notification p-0"
+                        aria-labelledby="btn-notifications">
+                        <div class="notification-header">
+                            <h6 class="notification-title">Notifications</h6>
+                            <button class="btn-clear-all" type="button">Mark all read</button>
+                        </div>
+                        <div class="notification-list">
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-success text-white">
+                                    <i class="bi bi-wallet2"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p class="notification-text">New sale received: <strong>$150.00</strong></p>
+                                    <span class="notification-time">2 mins ago</span>
+                                </div>
+                                <span class="notification-unread-dot"></span>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-primary text-white">
+                                    <i class="bi bi-person-plus-fill"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p class="notification-text">New user registered: <strong>John Doe</strong></p>
+                                    <span class="notification-time">1 hour ago</span>
+                                </div>
+                                <span class="notification-unread-dot"></span>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-warning text-dark">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p class="notification-text">Stock running low: <strong>Hoodie</strong></p>
+                                    <span class="notification-time">3 hours ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="#" class="notification-footer">View All Notifications</a>
+                    </div>
+                </div>
+
+                <div class="dropdown ms-2">
+                    <button class="navbar-profile-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="profile-dropdown">
+                        <img src="{{ auth()->user()?->avatar ? asset(auth()->user()->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()?->name ?? 'Admin') . '&background=e11d74&color=fff' }}"
+                            alt="{{ auth()->user()?->name ?? 'User' }}" class="navbar-profile-img">
+                        <span class="navbar-profile-name d-none d-md-inline">{{ auth()->user()->name ?? 'Administrator' }}</span>
+                        <i class="bi bi-chevron-down navbar-profile-caret"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-profile" aria-labelledby="profile-dropdown">
+                        <li class="dropdown-header">Welcome !</li>
+                        <!-- <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Account</a></li> -->
+                        <li><a class="dropdown-item" href="{{ route('settings.index') }}"><i class="bi bi-gear"></i> Settings</a></li>
+                        <!-- <li><a class="dropdown-item" href="#"><i class="bi bi-lock"></i> Lock Screen</a></li> -->
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="{{ route('auth.logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
