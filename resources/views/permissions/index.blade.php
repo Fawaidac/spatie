@@ -310,7 +310,7 @@
                         icon: 'error',
                         title: 'Gagal',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -328,7 +328,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;
@@ -390,7 +390,7 @@
                         icon: 'error',
                         title: 'Gagal',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -408,7 +408,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;

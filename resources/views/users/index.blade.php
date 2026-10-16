@@ -116,7 +116,7 @@
                             <td>{{ $users->firstItem() + $index }}</td>
                             <td>
                                 <div class="user-cell">
-                                    <!-- <img src="{{ $user->avatar ? asset($user->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode($user->name) . '&background=e11d74&color=fff' }}"
+                                    <!-- <img src="{{ $user->avatar ? asset($user->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode($user->name) . '&background=DB7093&color=fff' }}"
                                         alt="{{ $user->name }}" class="user-cell-avatar"> -->
                                     <div>
                                         <div class="user-cell-name">{{ $user->name }}</div>
@@ -562,7 +562,7 @@
                         icon: 'error',
                         title: 'Gagal Menambahkan',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -580,7 +580,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;
@@ -729,7 +729,7 @@
                         icon: 'error',
                         title: 'Gagal Memperbarui',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -747,7 +747,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;
@@ -790,7 +790,7 @@
                                 icon: 'error',
                                 title: 'Gagal Menghapus',
                                 text: data.message || 'Gagal menghapus user.',
-                                confirmButtonColor: '#e11d74'
+                                confirmButtonColor: '#DB7093'
                             });
                         } else {
                             Swal.fire({
@@ -808,7 +808,7 @@
                             icon: 'error',
                             title: 'Kesalahan Sistem',
                             text: err.message,
-                            confirmButtonColor: '#e11d74'
+                            confirmButtonColor: '#DB7093'
                         });
                     }
                 }

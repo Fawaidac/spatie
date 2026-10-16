@@ -86,7 +86,7 @@
 
     {{-- Sidebar Profile Card --}}
     <div class="sidebar-profile">
-        <img src="{{ auth()->user()?->avatar ? asset(auth()->user()->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()?->name ?? 'Admin') . '&background=e11d74&color=fff' }}"
+        <img src="{{ auth()->user()?->avatar ? asset(auth()->user()->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()?->name ?? 'Admin') . '&background=DB7093&color=fff' }}"
             alt="{{ auth()->user()?->name ?? 'User' }}" class="sidebar-profile-img">
         <div class="sidebar-profile-info">
             <div class="sidebar-profile-name">{{ auth()->user()->name ?? 'Administrator' }}</div>

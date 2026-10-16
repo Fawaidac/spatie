@@ -51,21 +51,21 @@
    2. Design System Variables
 --------------------------------------------------------------------- */
 :root {
-    /* Colors - Spark Pink Design System */
-    --bs-body-bg: #fffafe;
-    /* Canvas background: light, warm soft rose-white */
+    /* Colors - Spark Dusty Rose Design System */
+    --bs-body-bg: #fff9fb;
+    /* Canvas background: warm soft rose-white */
     --bs-body-font-family: "Plus Jakarta Sans", sans-serif;
 
-    --brand-forest-dark: #e11d74;
-    /* Core sidebar / brand dark plum background */
-    --brand-forest-medium: #e11d74;
-    /* Primary brand pink for buttons, links, accents */
-    --brand-forest-light: #2c0e27;
+    --brand-forest-dark: #C4527A;
+    /* Core sidebar / brand dark rose */
+    --brand-forest-medium: #DB7093;
+    /* Primary brand dusty pink for buttons, links, accents */
+    --brand-forest-light: #4A1030;
     /* Interactive elements in dark mode */
-    --brand-lime: #ff2d78;
-    /* Vibrant hot pink accent highlight */
-    --brand-lime-hover: #ff5493;
-    --brand-lime-translucent: rgba(255, 45, 120, 0.15);
+    --brand-lime: #E896AE;
+    /* Soft pink accent highlight */
+    --brand-lime-hover: #C4527A;
+    --brand-lime-translucent: rgba(219, 112, 147, 0.15);
 
     --text-main: #140713;
     /* Dark headers, main labels */
@@ -75,7 +75,7 @@
     /* Sidebar inactive link labels */
 
     --card-background: #ffffff;
-    --border-light: #f1e4ec;
+    --border-light: #fff4f8;
     --border-dark-green: rgba(255, 255, 255, 0.08);
 
     /* System Colors */
@@ -167,7 +167,7 @@ a:hover {
 --------------------------------------------------------------------- */
 .sidebar-wrapper {
     width: var(--sidebar-width);
-    background: linear-gradient(180deg, #831843 0%, #be185d 14%, #db2777 55%, #e11d74 100%);
+    background: linear-gradient(180deg, #8B2252 0%, #A83665 14%, #C4527A 55%, #DB7093 100%);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -177,7 +177,7 @@ a:hover {
     flex-direction: column;
     padding: 2rem 1.5rem;
     border-right: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 4px 0 24px rgba(131, 24, 67, 0.18);
+    box-shadow: 4px 0 24px rgba(139, 34, 82, 0.20);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -294,7 +294,7 @@ a:hover {
     font-size: 0.75rem;
     font-weight: 700;
     background-color: #ffffff;
-    color: #db2777;
+    color: #C4527A;
     padding: 0.15rem 0.5rem;
     border-radius: 50rem;
 }
@@ -592,7 +592,7 @@ body.sidebar-minimized .sidebar-profile {
 }
 
 .navbar-search-input:focus {
-    border-color: rgba(225, 29, 116, 0.4);
+    border-color: rgba(219, 112, 147, 0.4);
     box-shadow: 0 0 0 3px var(--brand-lime-translucent);
 }
 
@@ -1201,7 +1201,7 @@ body.sidebar-minimized .sidebar-profile {
 }
 
 .bg-forest-medium {
-    background-color: #be185d;
+    background-color: #C4527A;
 }
 
 .bg-lime-accent {
@@ -1320,6 +1320,7 @@ body.sidebar-minimized .sidebar-profile {
    12. Responsive Adjustments
 --------------------------------------------------------------------- */
 @media (max-width: 1200px) {
+
     .sidebar-wrapper,
     body.sidebar-minimized .sidebar-wrapper {
         width: 280px !important;
@@ -1672,10 +1673,10 @@ span.flatpickr-weekday {
 
 /* Custom ApexCharts Hover Overrides for Vibrant Pink (#FF2D78) */
 .apexcharts-bar-area[fill="#FF2D78"]:hover,
-.apexcharts-bar-area[fill="#ff2d78"]:hover,
+.apexcharts-bar-area[fill="#E896AE"]:hover,
 .apexcharts-pie-area[fill="#FF2D78"]:hover,
-.apexcharts-pie-area[fill="#ff2d78"]:hover {
-    fill: #ff5493 !important;
+.apexcharts-pie-area[fill="#E896AE"]:hover {
+    fill: #E896AE !important;
 }
 
 /* ---------------------------------------------------------------------
@@ -1843,7 +1844,7 @@ span.flatpickr-weekday {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bs-body-bg);
+    background: #f8f7f7;
     padding: 1.5rem;
     position: relative;
     overflow: hidden;
@@ -2240,7 +2241,7 @@ span.flatpickr-weekday {
 }
 
 .btn-login:hover {
-    background-color: #be185d;
+    background-color: #C4527A;
     color: #ffffff;
     transform: translateY(-1px);
     box-shadow: 0 4px 14px var(--brand-lime-translucent);

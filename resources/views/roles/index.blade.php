@@ -88,7 +88,7 @@
                             <span style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Assigned Permissions:</span>
                             <button class="btn btn-sm btn-link p-0 text-decoration-none btn-quick-give"
                                 data-id="{{ $role->id }}" data-name="{{ $role->name }}"
-                                style="font-size: 0.75rem; color: #e11d74; font-weight: 700;">
+                                style="font-size: 0.75rem; color: #DB7093; font-weight: 700;">
                                 <i class="bi bi-plus"></i> Give
                             </button>
                         </div>
@@ -346,7 +346,7 @@
                         icon: 'error',
                         title: 'Gagal Menambah Role',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -364,7 +364,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;
@@ -439,7 +439,7 @@
                         icon: 'error',
                         title: 'Gagal Memperbarui Role',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     Swal.fire({
@@ -457,7 +457,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;

@@ -21,13 +21,13 @@
                 <div class="profile-card-banner"></div>
                 <div class="profile-card-body">
                     <div class="profile-avatar-wrapper">
-                        <img src="{{ $user->avatar ? asset($user->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode($user->name) . '&background=e11d74&color=fff&size=128' }}"
+                        <img src="{{ $user->avatar ? asset($user->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode($user->name) . '&background=DB7093&color=fff&size=128' }}"
                             alt="{{ $user->name }}" class="profile-avatar" id="profile-avatar-img">
                     </div>
                     <h3 class="profile-name" id="display-profile-name">{{ $user->name }}</h3>
                     <p class="profile-role">
                         @forelse($user->roles as $role)
-                            <span class="badge" style="background: rgba(225, 29, 116, 0.1); color: #e11d74; font-weight: 700;">
+                            <span class="badge" style="background: rgba(139, 92, 246, 0.1); color: #DB7093; font-weight: 700;">
                                 {{ ucfirst($role->name) }}
                             </span>
                         @empty
@@ -318,7 +318,7 @@
                         icon: 'error',
                         title: 'Gagal Menyimpan',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     document.getElementById('display-profile-name').innerText = data.user.name;
@@ -340,7 +340,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;
@@ -513,7 +513,7 @@
                         icon: 'error',
                         title: 'Gagal',
                         html: errorMsg,
-                        confirmButtonColor: '#e11d74'
+                        confirmButtonColor: '#DB7093'
                     });
                 } else {
                     form.reset();
@@ -531,7 +531,7 @@
                     icon: 'error',
                     title: 'Kesalahan Sistem',
                     text: err.message,
-                    confirmButtonColor: '#e11d74'
+                    confirmButtonColor: '#DB7093'
                 });
             } finally {
                 btn.disabled = false;

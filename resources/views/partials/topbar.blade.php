@@ -70,7 +70,7 @@
                 <div class="dropdown ms-2">
                     <button class="navbar-profile-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false" id="profile-dropdown">
-                        <img src="{{ auth()->user()?->avatar ? asset(auth()->user()->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()?->name ?? 'Admin') . '&background=e11d74&color=fff' }}"
+                        <img src="{{ auth()->user()?->avatar ? asset(auth()->user()->avatar) : 'https://ui-avatars.com/api/?name=' . urlencode(auth()->user()?->name ?? 'Admin') . '&background=DB7093&color=fff' }}"
                             alt="{{ auth()->user()?->name ?? 'User' }}" class="navbar-profile-img">
                         <span class="navbar-profile-name d-none d-md-inline">{{ auth()->user()->name ?? 'Administrator' }}</span>
                         <i class="bi bi-chevron-down navbar-profile-caret"></i>
