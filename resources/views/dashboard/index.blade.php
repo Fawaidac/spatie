@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends ('layouts.app')
 
-@section('title', 'Dashboard - Spark Admin')
-@section('meta_description', 'Spark Admin Dashboard - Manage your sales and analytics')
+@section ('title', 'Dashboard - Spark Admin')
+@section ('meta_description', 'Spark Admin Dashboard - Manage your sales and analytics')
 
-@section('content')
-
+@section ('content')
     {{-- START: Dashboard Header Banner --}}
     <div class="page-header">
         <div>
@@ -21,7 +20,6 @@
 
     {{-- START: Main Layout Grid (2 Columns: Dashboard + Performance Pane) --}}
     <div class="row g-4">
-
         {{-- TOP AREA: Quick Info Stat Cards Row (Full Width) --}}
         <div class="col-12">
             <div class="row g-4">
@@ -39,14 +37,34 @@
                         </a>
 
                         {{-- Inline SVG geometric decoration --}}
-                        <svg class="alert-green-bg-shape" viewBox="0 0 100 100" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                            class="alert-green-bg-shape"
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
                             <g transform="translate(50,50)">
                                 <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78" />
-                                <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78"
-                                    transform="rotate(60)" />
-                                <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78"
-                                    transform="rotate(120)" />
+                                <rect
+                                    x="-6"
+                                    y="-45"
+                                    width="12"
+                                    height="90"
+                                    rx="6"
+                                    ry="6"
+                                    fill="#FF2D78"
+                                    transform="rotate(60)"
+                                />
+                                <rect
+                                    x="-6"
+                                    y="-45"
+                                    width="12"
+                                    height="90"
+                                    rx="6"
+                                    ry="6"
+                                    fill="#FF2D78"
+                                    transform="rotate(120)"
+                                />
                             </g>
                         </svg>
                     </div>
@@ -59,15 +77,33 @@
                             <div class="card-header">
                                 <span class="stat-label">Net Income</span>
                                 <div class="dropdown">
-                                    <button class="card-more-btn" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false" aria-label="More Options" id="btn-more-income">
+                                    <button
+                                        class="card-more-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        aria-label="More Options"
+                                        id="btn-more-income"
+                                    >
                                         <i class="bi bi-three-dots"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat"></i> Refresh</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export Report</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-eye-slash"></i> Hide Details</a></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                ><i class="bi bi-arrow-repeat"></i> Refresh</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                ><i class="bi bi-file-earmark-arrow-down"></i> Export Report</a
+                                            >
+                                        </li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li>
+                                            <a class="dropdown-item text-danger" href="#"
+                                                ><i class="bi bi-eye-slash"></i> Hide Details</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -90,15 +126,33 @@
                             <div class="card-header">
                                 <span class="stat-label">Total Return</span>
                                 <div class="dropdown">
-                                    <button class="card-more-btn" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false" aria-label="More Options" id="btn-more-return">
+                                    <button
+                                        class="card-more-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        aria-label="More Options"
+                                        id="btn-more-return"
+                                    >
                                         <i class="bi bi-three-dots"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat"></i> Refresh</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export Report</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-eye-slash"></i> Hide Details</a></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                ><i class="bi bi-arrow-repeat"></i> Refresh</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                ><i class="bi bi-file-earmark-arrow-down"></i> Export Report</a
+                                            >
+                                        </li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li>
+                                            <a class="dropdown-item text-danger" href="#"
+                                                ><i class="bi bi-eye-slash"></i> Hide Details</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -119,7 +173,6 @@
 
         {{-- LEFT AREA: Primary Dashboard Stats & Tables --}}
         <div class="col-xl-9 col-lg-8">
-
             {{-- START: Details Area (Transactions + Performance Charts) --}}
             <div class="row g-4">
                 {{-- Column: Revenue Chart (Full Width / Wider) --}}
@@ -153,13 +206,25 @@
                         <div class="card-header">
                             <h2 class="card-title">Transaction</h2>
                             <div class="dropdown">
-                                <button class="card-more-btn" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false" aria-label="More Options" id="btn-more-transaction">
+                                <button
+                                    class="card-more-btn"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    aria-label="More Options"
+                                    id="btn-more-transaction"
+                                >
                                     <i class="bi bi-three-dots"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-funnel"></i> Filter Status</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export CSV</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="bi bi-funnel"></i> Filter Status</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            ><i class="bi bi-file-earmark-arrow-down"></i> Export CSV</a
+                                        >
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -210,7 +275,6 @@
                                 <div class="transaction-amount text-main">-$45.00</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -220,13 +284,23 @@
                         <div class="card-header">
                             <h2 class="card-title">Product Overview</h2>
                             <div class="dropdown">
-                                <button class="card-more-btn" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false" aria-label="More Options" id="btn-more-products">
+                                <button
+                                    class="card-more-btn"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    aria-label="More Options"
+                                    id="btn-more-products"
+                                >
                                     <i class="bi bi-three-dots"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i> Add Product</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Manage</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i> Add Product</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Manage</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -236,8 +310,14 @@
                                 <span class="progress-label">Product Launched</span>
                                 <span class="progress-value">233</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Product Launched Progress"
-                                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Product Launched Progress"
+                                aria-valuenow="65"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-lime-accent w-65"></div>
                             </div>
                         </div>
@@ -247,8 +327,14 @@
                                 <span class="progress-label">Ongoing Product</span>
                                 <span class="progress-value">23</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Ongoing Product Progress"
-                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Ongoing Product Progress"
+                                aria-valuenow="20"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-lime-accent opacity-50 w-50"></div>
                             </div>
                         </div>
@@ -258,8 +344,14 @@
                                 <span class="progress-label">Product Sold</span>
                                 <span class="progress-value">482</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Product Sold Progress"
-                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Product Sold Progress"
+                                aria-valuenow="85"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-lime-accent w-85"></div>
                             </div>
                         </div>
@@ -269,8 +361,14 @@
                                 <span class="progress-label">Product Returned</span>
                                 <span class="progress-value">8</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Product Returned Progress"
-                                aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Product Returned Progress"
+                                aria-valuenow="10"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-brand-orange w-38"></div>
                             </div>
                         </div>
@@ -280,8 +378,14 @@
                                 <span class="progress-label">Product In Stock</span>
                                 <span class="progress-value">1,420</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Product In Stock Progress"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Product In Stock Progress"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-lime-accent w-75"></div>
                             </div>
                         </div>
@@ -291,23 +395,26 @@
                                 <span class="progress-label">Pending Shipment</span>
                                 <span class="progress-value">64</span>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Pending Shipment Progress"
-                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                            <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Pending Shipment Progress"
+                                aria-valuenow="45"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
                                 <div class="progress-bar bg-lime-accent opacity-50 w-45"></div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             {{-- END: Details Area --}}
-
         </div>
 
         {{-- RIGHT AREA: Performance Details Sidebar Panel --}}
         <div class="col-xl-3 col-lg-4">
             <div class="right-panel-wrapper d-flex flex-column gap-4 h-100">
-
                 {{-- Performance Donut Chart card --}}
                 <div class="card flex-grow-1 d-flex flex-column justify-content-between mb-0">
                     <div class="card-header mb-1">
@@ -335,14 +442,34 @@
 
                 {{-- Level Up Promotion CTA banner --}}
                 <div class="promo-banner-card">
-                    <svg class="promo-banner-bg-shape" viewBox="0 0 100 100" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                        class="promo-banner-bg-shape"
+                        viewBox="0 0 100 100"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
                         <g transform="translate(50,50)">
                             <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78" />
-                            <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78"
-                                transform="rotate(60)" />
-                            <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#FF2D78"
-                                transform="rotate(120)" />
+                            <rect
+                                x="-6"
+                                y="-45"
+                                width="12"
+                                height="90"
+                                rx="6"
+                                ry="6"
+                                fill="#FF2D78"
+                                transform="rotate(60)"
+                            />
+                            <rect
+                                x="-6"
+                                y="-45"
+                                width="12"
+                                height="90"
+                                rx="6"
+                                ry="6"
+                                fill="#FF2D78"
+                                transform="rotate(120)"
+                            />
                         </g>
                     </svg>
 
@@ -353,12 +480,11 @@
             </div>
         </div>
         {{-- END: RIGHT AREA --}}
-
     </div>
     {{-- END: Main Layout Grid --}}
 
 @endsection
 
-@push('scripts')
+@push ('scripts')
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
 @endpush
